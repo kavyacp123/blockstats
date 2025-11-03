@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ crypto_name }} Prediction - BlockStats</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="BlockStats Logo" class="logo">
+                <h1>BLOCKSTATS</h1>
+            </div>
+            <a href="/" class="nav-link">Back to Home</a>
+        </div>
+    </nav>
+
+    <div class="prediction-container">
+        <div class="prediction-header">
+            <div class="crypto-title">
+                <img src="{{ url_for('static', filename='images/' + crypto_icon) }}" alt="{{ crypto_name }}" class="crypto-icon-large">
+                <div>
+                    <h2>{{ crypto_name }}</h2>
+                    <span class="crypto-symbol-large">{{ crypto_symbol }}</span>
+                </div>
+            </div>
+
+            <div class="live-price-section">
+                <div class="live-label">
+                    <span class="pulse-dot"></span>
+                    Live Price
+                </div>
+                <div class="live-price" id="current-price">
+                    <span class="loading">Loading...</span>
+                </div>
+                <div class="live-change" id="price-change"></div>
+                <div class="last-update-time" id="last-update"></div>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">24h Volume</div>
+                <div class="stat-value" id="volume-24h">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">24h High</div>
+                <div class="stat-value" id="high-24h">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">24h Low</div>
+                <div class="stat-value" id="low-24h">-</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Price Change</div>
+                <div class="stat-value" id="price-change-24h">-</div>
+            </div>
+        </div>
+
+        <div class="prediction-graph-section">
+            <h3>30-Day Price Prediction</h3>
+            <p class="prediction-description">
+                AI-powered LSTM model prediction showing historical data and forecasted prices for the next 30 days
+            </p>
+            <div class="graph-container">
+                <img src="{{ url_for('static', filename='images/' + graph_filename) }}"
+                     alt="{{ crypto_name }} Prediction Graph"
+                     class="prediction-graph">
+            </div>
+            <div class="prediction-note">
+                <strong>Note:</strong> Predictions are based on historical data and machine learning models.
+                Cryptocurrency markets are highly volatile and predictions should not be used as financial advice.
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 BlockStats. All rights reserved. Data provided by Binance API.</p>
+    </footer>
+
+    <script>
+        const cryptoSymbol = '{{ crypto_symbol_api }}';
+        const cryptoName = '{{ crypto_name }}';
+    </script>
+    <script src="{{ url_for('static', filename='js/predict.js') }}"></script>
+</body>
+</html>
