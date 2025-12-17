@@ -1,7 +1,3 @@
-Below is a **complete, professional README.md** you can **copy–paste directly** into your GitHub repo.
-It is written exactly at the level **interviewers expect**: clear, honest, architecture-focused, and resume-ready.
-
-I’ve named the project **ChronoPrice** (you can change the name easily).
 
 ---
 
@@ -129,38 +125,7 @@ GET /metrics/model
 
 ---
 
-### 7️⃣ Frontend Dashboard
 
-* Built using React / Next.js
-* Interactive charts:
-
-  * Actual vs Predicted price
-  * Prediction error over time
-* Clean, fintech-style UI
-* No authentication (demo-focused)
-
----
-
-## ☁️ Deployment Strategy
-
-### Free-Tier Friendly Deployment
-
-```
-Render (Free Tier)
- ├── API Gateway
- ├── Frontend Dashboard
- ├── PostgreSQL (managed)
- └── Redis (optional cache)
-
-External / Local
- └── Ingestion + LSTM Inference
-```
-
-⚠️ **Note:**
-On free-tier deployments, background services may sleep.
-Therefore, predictions operate in **near–real-time or on-demand mode**.
-
----
 
 ## ⚖️ Design Trade-Offs
 
@@ -199,27 +164,7 @@ The dashboard visualizes:
 
 ---
 
-## 📁 Project Structure (Example)
 
-```
-chronoprice/
-├── backend/
-│   ├── ingestion/
-│   ├── feature_engineering/
-│   ├── inference/
-│   ├── api/
-│   └── config/
-├── frontend/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-├── models/
-│   └── lstm_model.pt
-├── data/
-├── README.md
-```
-
----
 
 ## 🧩 What This Project Demonstrates
 
@@ -230,32 +175,6 @@ chronoprice/
 * Cloud cost awareness
 * Real-world engineering trade-offs
 
----
-
-## 📄 Resume Description (You Can Use This)
-
-> **ChronoPrice – Cryptocurrency Price Prediction Platform**
-> Designed and implemented an LSTM-based time-series prediction system for cryptocurrency prices. Built a data ingestion pipeline, feature engineering layer, and inference service, with predictions stored in PostgreSQL and visualized through a React dashboard. Optimized for free-tier cloud deployment while maintaining a production-style architecture.
-
----
-
-## 🎤 Interview Explanation (1–2 Minutes)
-
-> “ChronoPrice ingests recent crypto price data, applies window-based feature engineering, and runs LSTM inference to predict future prices. Predictions are stored for analytics and visualized on a dashboard. For demo purposes, it’s deployed on free-tier infrastructure, so predictions operate in near–real-time, but the architecture is scalable to a fully real-time system.”
-
----
-
-## 🔮 Future Enhancements (Optional)
-
-* Multiple cryptocurrencies
-* Model retraining pipeline
-* Confidence intervals
-* Drift detection
-* Fully real-time WebSocket ingestion
-* Migration to always-on infrastructure
-
----
-
 ## ⚠️ Disclaimer
 
 This project is built **for educational and demonstration purposes only**.
@@ -263,19 +182,4 @@ It is **not** a trading or financial advice system.
 
 ---
 
-## ⭐ Final Note
 
-ChronoPrice focuses on **correct architecture and ML integration**, not raw performance.
-The design choices are intentional and reflect **real-world constraints** faced during early-stage system development.
-
----
-
-If you want, next I can:
-
-* Customize this README to **1-page concise version**
-* Add **architecture diagram image**
-* Write **setup & run instructions**
-* Optimize it for **GitHub stars & recruiters**
-* Create **demo script for interviews**
-
-Just tell me 👍
